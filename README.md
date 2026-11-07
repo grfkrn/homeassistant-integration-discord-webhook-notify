@@ -22,10 +22,33 @@ Home Assistant から Discord の Webhook へ通知するカスタム統合で�
 
 ## インストール
 
-1. このフォルダ内の `custom_components/discord_webhook_notify` を、Home Assistant の `config/custom_components/` にコピーする
-2. Home Assistant を再起動する
+### 前提条件
 
-HACS のカスタムリポジトリとして使うこともできます（リポジトリ直下に `custom_components` がある構成です）。リポジトリ: https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify
+- Home Assistant 2024.4.0 以降
+- Discord の Webhook URL（次の手順で取得します）
+
+### 1. Discord で Webhook URL を取得する
+
+1. 投稿先チャンネルの歯車アイコン（チャンネルの編集）を開く ※サーバーの管理権限が必要です
+2. 「連携サービス」→「ウェブフック」→「新しいウェブフック」
+3. 必要なら名前を変えて、「ウェブフックURLをコピー」で URL を控えておく
+
+### 2. 統合をインストールする
+
+#### 方法A：HACS から（推奨）
+
+1. HACS を開き、右上のメニュー（︙）から「カスタムリポジトリ」を選ぶ
+2. リポジトリ欄に `https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify` を貼り、カテゴリは「統合」を選んで「追加」
+3. 一覧に出る「Discord Webhook Notify」を開き、右下の「ダウンロード」を押す
+4. Home Assistant を再起動する
+
+#### 方法B：手動インストール
+
+1. このページ右上の「Code」→「Download ZIP」で ZIP をダウンロードして展開する
+2. `custom_components/discord_webhook_notify` フォルダを、Home Assistant の `config/custom_components/` にコピーする（Samba 共有や File editor アドオンなど、お使いの方法で）
+3. Home Assistant を再起動する
+
+インストール後の初期設定は、次の「設定（GUI のみ）」の節をご覧ください。
 
 ## 設定（GUI のみ）
 
@@ -37,7 +60,7 @@ HACS のカスタムリポジトリとして使うこともできます（リポ
    - **アバターURL**（任意）
    - **TTS**: 通常はオフ
 3. 確認画面で「テストメッセージを送信」を押すと、その場で Discord にテスト投稿が届きます。問題なければ「保存」
-4. 2つ目以降のチャンネルは、同じ手順を繰り返します。後からの変更は、エントリの「設定」から同じ画面で行えます（テスト送信も可能）
+4. 2つ目以降のチャンネルは、同じ手順を繰り返します（同じ Webhook の二重登録は自動で弾かれます）。後からの変更は、エントリの「設定」から同じ画面で行えます（テスト送信も可能）
 
 ## 使い方
 

@@ -25,7 +25,7 @@ Home Assistant から Discord の Webhook へ通知するカスタム統合で�
 1. このフォルダ内の `custom_components/discord_webhook_notify` を、Home Assistant の `config/custom_components/` にコピーする
 2. Home Assistant を再起動する
 
-HACS のカスタムリポジトリとして使うこともできます（リポジトリ直下に `custom_components` がある構成です）。
+HACS のカスタムリポジトリとして使うこともできます（リポジトリ直下に `custom_components` がある構成です）。リポジトリ: https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify
 
 ## 設定（GUI のみ）
 

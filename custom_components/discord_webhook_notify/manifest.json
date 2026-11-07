@@ -1,1 +1,16 @@
-{"codeowners":["@grfkrn"],"config_flow":true,"dependencies":["notify"],"documentation":"https://discord.com/developers/docs/resources/webhook","domain":"discord_webhook_notify","iot_class":"cloud_push","name":"Discord Webhook Notify","requirements":[],"version":"1.0.0"}
+{
+  "domain": "discord_webhook_notify",
+  "name": "Discord Webhook Notify",
+  "codeowners": [
+    "@grfkrn"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "notify"
+  ],
+  "documentation": "https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

@@ -9,6 +9,7 @@
     "notify"
   ],
   "documentation": "https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify",
+  "integration_type": "service",
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify/issues",
   "requirements": [],

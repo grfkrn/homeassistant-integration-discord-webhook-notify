@@ -19,8 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Note: The Discord name and logo are trademarks of Discord Inc. This project is
-not affiliated with or endorsed by Discord Inc. The brand images in
-custom_components/discord_webhook_notify/brand/ originate from the MIT-licensed
-bensonrodney/homeassistant-discord project.

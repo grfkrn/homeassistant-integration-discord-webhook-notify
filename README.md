@@ -8,7 +8,7 @@ Home Assistant から Discord の Webhook へ通知するカスタム統合で�
 
 ## 既存の同種統合（bensonrodney 版）との違い
 
-精査で見つかった制約を中心に直しています。
+精査で見つかった制約を中心に解消しています。
 
 | 項目 | 本統合 | bensonrodney 版 v1.0.7 |
 |---|---|---|

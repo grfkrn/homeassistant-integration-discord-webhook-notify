@@ -6,6 +6,39 @@ Home Assistant から Discord の Webhook へ通知するカスタム統合で�
 - ドメイン: `discord_webhook_notify`（既存の同種統合とは競合しない専用ドメイン）
 - 追加依存: なし（Home Assistant 標準の aiohttp のみ使用）
 
+## English
+
+A Home Assistant custom integration that sends notifications to Discord via channel webhooks. Configuration is done entirely in the UI (config flow); no YAML is required. Its distinguishing feature is support for attaching **local files** (such as camera snapshots and video clips) to messages.
+
+- Domain: `discord_webhook_notify` (a dedicated domain that does not conflict with other Discord integrations)
+- Requirements: Home Assistant 2024.4.0 or later; no additional Python dependencies
+
+### Features
+
+- Attach local files (images, videos, etc., up to 25 MB each, max 10 files), or let Home Assistant download http(s) URLs and attach them
+- Embed images from URLs
+- Per-message `username` / `avatar_url` overrides
+- Webhook URL validation: only the canonical `https://discord.com/api/webhooks/` format is accepted, and duplicates are detected per webhook ID
+- Automatic retry on Discord rate limiting (HTTP 429), honoring `Retry-After` (up to 2 retries)
+- The combined number of embeds and images is capped at 10, matching Discord's limit
+- Japanese UI for the configuration flow
+
+### Installation
+
+Marketplace (HACS): add this repository as a custom repository (category: Integration), install "Discord Webhook Notify", and restart Home Assistant.
+
+Manual: copy the `custom_components/discord_webhook_notify` folder into your `config/custom_components/` directory and restart Home Assistant.
+
+### Configuration
+
+Go to Settings → Devices & services → Add integration → "Discord Webhook Notify", and enter a name (this becomes the `notify.<name>` service) and the webhook URL. A display username, an avatar URL, and TTS can optionally be set. A test message can be sent from the confirmation step before saving.
+
+### Usage
+
+Call the `notify.<name>` service from an automation. In addition to `message` and `title`, the `data` field accepts `embeds` (raw Discord embeds), `images` (image URLs), `files` (local paths or URLs to attach), `username` / `avatar_url` (per-message overrides), `tts`, and `allowed_mentions`. Local files must be in a directory allowed by Home Assistant (for example under `/config/www/`).
+
+The detailed documentation below is in Japanese.
+
 ## 既存の同種統合（bensonrodney 版）との違い
 
 精査で見つかった制約を中心に解消しています。

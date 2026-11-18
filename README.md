@@ -35,9 +35,9 @@ Home Assistant から Discord の Webhook へ通知するカスタム統合で�
 
 ### 2. 統合をインストールする
 
-#### 方法A：HACS から（推奨）
+#### 方法A：マーケットプレイス（HACS）から（推奨）
 
-1. HACS を開き、右上のメニュー（︙）から「カスタムリポジトリ」を選ぶ
+1. マーケットプレイス（HACS）を開き、右上のメニュー（︙）から「カスタムリポジトリ」を選ぶ
 2. リポジトリ欄に `https://github.com/grfkrn/homeassistant-integration-discord-webhook-notify` を貼り、カテゴリは「統合」を選んで「追加」
 3. 一覧に出る「Discord Webhook Notify」を開き、右下の「ダウンロード」を押す
 4. Home Assistant を再起動する

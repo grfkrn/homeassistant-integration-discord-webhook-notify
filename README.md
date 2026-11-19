@@ -164,6 +164,8 @@ homeassistant:
 
 MIT License（`LICENSE` ファイル参照）。著作権者は grfkrn です。
 
+この統合は、bensonrodney/homeassistant-discord（https://github.com/bensonrodney/homeassistant-discord、MIT ライセンス）を精査し、その構造をベースに開発したものです。元の著作権表示（Copyright (c) 2026 Jason Milen）は、MIT ライセンスの条件にもとづき `LICENSE` ファイルに併記しています。
+
 ## ロゴについて
 
 `brand/` の Discord ロゴは、精査対象だった bensonrodney/homeassistant-discord（MIT ライセンス）に同梱されていたものを利用しています。Discord の商標は Discord Inc. に帰属します。
